@@ -13,7 +13,7 @@ $q5 = $_POST['q5'];
 $q6 = $_POST['q6'];
 $subject = "Форма отправки сообщений с сайта";
 $subject2 = "Copy of your form submission";
-$message = $first_name . " оставил сообщение:" . "\n\n" . $_POST['message'];
+$message = $surname . " оставил сообщение:" . "\n\n" . $_POST['name'];
 $message2 = "Here is a copy of your message " . $first_name . "\n\n" . $_POST['message'];
 
 $headers = "From:" . $from;
