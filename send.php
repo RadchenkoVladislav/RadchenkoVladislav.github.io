@@ -2,7 +2,7 @@
 
 if(isset($_POST['submit'])){
 $to = "radchenk.o.v@yadnex.ru";; // Здесь нужно написать e-mail, куда будут приходить письма
-$from = $_POST['radchenk.o@yadnex.ru']; // this is the sender's Email address
+$from = $_POST['email']; // this is the sender's Email address
 $name = $_POST['name'];
 $surname = $_POST['surname'];
 $q1 = $_POST['q1'];
@@ -23,7 +23,14 @@ $headers2 = "From:" . $to;
 $mail_to_myemail = "Здравствуйте! 
 Было отправлено сообщение с сайта! 
 Имя отправителя: $name
-Фамилия: $surname";  
+Фамилия: $surname
+Вопрос 1: $q1
+Вопрос 2: $q2
+Вопрос 3: $q3
+Вопрос 4: $q4
+Вопрос 5: $q5
+Вопрос 6: $q6
+";  
     
 mail($to,$subject,$message,$headers);
 // mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender - Отключено!
@@ -33,3 +40,41 @@ echo "<br /><br /><a href='https://radchenkovladislav.github.io/index.html'>Ве
 }
 
 ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
