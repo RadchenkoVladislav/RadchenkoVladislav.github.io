@@ -22,7 +22,7 @@ $mail->SMTPSecure = 'ssl';
 $mail->Port = 465;
 
 $mail->setFrom('vhr_13@mail.ru'); // от кого будет уходить письмо?
-$mail->addAddress('radchenk.o.v@yandex.ru');
+$mail->addAddress('jesewev246@emailhost99.com');
 //$mail->addAddress('ellen@example.com');               // Name is optional
 //$mail->addReplyTo('info@example.com', 'Information');
 //$mail->addCC('cc@example.com');
