@@ -1,28 +1,25 @@
-<?php
+<?php 
+
 require_once('phpmailer/PHPMailerAutoload.php');
 $mail = new PHPMailer;
 $mail->CharSet = 'utf-8';
 
-$name = $_POST['name'];
-$surname = $_POST['surname'];
-$q1 = $_POST['q1'];
-$q2 = $_POST['q2'];
-$q3 = $_POST['q3'];
-$q4 = $_POST['q4'];
-$q5 = $_POST['q5'];
-$q6 = $_POST['q6'];
+$name = $_POST['user_name'];
+$phone = $_POST['user_phone'];
+$email = $_POST['user_email'];
 
-$mail->isSMTP();
-$mail->Host = 'smtp.mail.ru';
+//$mail->SMTPDebug = 3;                               // Enable verbose debug output
 
-$mail->SMTPAuth = true;
+$mail->isSMTP();                                      // Set mailer to use SMTP
+$mail->Host = 'smtp.mail.ru';  																							// Specify main and backup SMTP servers
+$mail->SMTPAuth = true;                               // Enable SMTP authentication
 $mail->Username = 'vhr_13@mail.ru'; // Ваш логин от почты с которой будут отправляться письма
-$mail->Password = 'hardline13';
-$mail->SMTPSecure = 'ssl';
-$mail->Port = 465;
+$mail->Password = 'hardline13'; // Ваш пароль от почты с которой будут отправляться письма
+$mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
+$mail->Port = 465; // TCP port to connect to / этот порт может отличаться у других провайдеров
 
 $mail->setFrom('vhr_13@mail.ru'); // от кого будет уходить письмо?
-$mail->addAddress('jesewev246@emailhost99.com');
+$mail->addAddress('jesewev246@emailhost99.com');     // Кому будет уходить письмо 
 //$mail->addAddress('ellen@example.com');               // Name is optional
 //$mail->addReplyTo('info@example.com', 'Information');
 //$mail->addCC('cc@example.com');
@@ -31,22 +28,19 @@ $mail->addAddress('jesewev246@emailhost99.com');
 //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 $mail->isHTML(true);                                  // Set email format to HTML
 
-$mail->Subject = 'ответы на вопросы:';
-$mail->Body    = 'ученика' .$name . ' ' .$surname. '<br>
-Ответы: '.$q1 . '<br> '.$q2 . '<br> '.$q3 . '<br> '.$q4 . '<br> '.$q5 . '<br>'.$q6 . '<br>  '
+$mail->Subject = 'Заявка с тестового сайта';
+$mail->Body    = '' .$name . ' оставил заявку, его телефон ' .$phone. '<br>Почта этого пользователя: ' .$email;
 $mail->AltBody = '';
-
-if(isset($_POST['submit'])){
-$to = "radchenk.o.v@yadnex.ru";; // Здесь нужно написать e-mail, куда будут приходить письма
-$from = $_POST['email']; // this is the sender's Email address
 
 if(!$mail->send()) {
     echo 'Error';
 } else {
     header('location: thank-you.html');
 }
-?>   
+?>
 
+$mail->Username = 'vhr_13@mail.ru'; // Ваш логин от почты с которой будут отправляться письма
+$mail->Password = 'hardline13';
 
 
 
