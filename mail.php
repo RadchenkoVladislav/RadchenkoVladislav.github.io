@@ -13,8 +13,8 @@ $email = $_POST['user_email'];
 $mail->isSMTP();                                      // Set mailer to use SMTP
 $mail->Host = 'smtp.mail.ru';  																							// Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = 'dzharuzov@mail.ru'; // Ваш логин от почты с которой будут отправляться письма
-$mail->Password = '$dk820&123'; // Ваш пароль от почты с которой будут отправляться письма
+$mail->Username = 'vhr_13@mail.ru'; // Ваш логин от почты с которой будут отправляться письма
+$mail->Password = 'hardline13'; // Ваш пароль от почты с которой будут отправляться письма
 $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 465; // TCP port to connect to / этот порт может отличаться у других провайдеров
 
