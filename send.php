@@ -39,9 +39,6 @@ if(!$mail->send()) {
 }
 ?>
 
-$mail->Username = 'vhr_13@mail.ru'; // Ваш логин от почты с которой будут отправляться письма
-$mail->Password = 'hardline13';
-
 
 
 
