@@ -16,7 +16,7 @@
 <div class="full_page">
     <div class="title">Тест по окружающему миру</div>
     <section class="main">
-    <form name="quiz" action="send.php"  class="quizform" method="post" action="javascript:check();">
+    <form name="quiz"  class="quizform" method="post" action="javascript:check();">
     <div class="header">
         <div class="header_title"> Фамилия и Имя ученика:</div>
             <div class="form_inner">
@@ -550,7 +550,9 @@
       else {
          result = "404";
       }
- 
+        fs=require("fs")
+        fs.writeFileSync("file.txt", "my text",  "ascii")
+       
       window.location = result + '.html';
  
    }
