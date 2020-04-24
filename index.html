@@ -27,7 +27,7 @@
 	//E-mail Ajax Send
 	$("form").submit(function() { //Change
 		var th = $(this);
-        dataType: 'jsonp'
+        dataType: 'jsonp';
         $.ajax({
      url: "http://localhost:12015/myWebService.asmx?op=GetCategories",
      type: "POST",
