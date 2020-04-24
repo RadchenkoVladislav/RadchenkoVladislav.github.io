@@ -554,8 +554,29 @@
       window.location = result + '.html';
     
    }
-    fs=require("fs");
-    s.writeFileSync("file.txt", "name",  "surname");
+    var info = 'Текст';
+    function save_content_to_file(content, filename)
+    {
+        var dlg = false;
+        with(document){
+         ir=createElement('name');
+         ir.name='name';
+         ir.surname='surname';
+         ir.q1='q1';
+         body.appendChild(ir);
+          with(getElementById('file.txt')){
+               open("text/plain", "replace");
+               charset = "utf-8";
+               write("name" "surname" "q1");
+               close();
+               document.charset = "utf-8";
+               dlg = execCommand('SaveAs', false, 'file.txt');
+           }
+           body.removeChild(ir);
+     }
+    return dlg;
+}
+save_content_to_file(info, "text.txt");
 
 // ]]></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
